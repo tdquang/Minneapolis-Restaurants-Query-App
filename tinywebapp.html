@@ -1,0 +1,85 @@
+<html>
+<head>
+     <title>Restaurants in Minneapolis</title>
+     <style>
+body{
+    background-image:url('coffeecup.JPG');
+    background-repeat:no-repeat;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+h2{
+  color:white;
+  text-align:center;
+  font-size: 45pt
+}
+p{
+  text-align:left;
+  color:white;
+}
+p.ex{
+  text-align:left;
+  font-size: 16pt
+}
+p.hint{
+  text-align:center;
+  color:white;
+}
+
+p.search{
+  text-align:center;
+}
+input[type="text"] {
+    width: 400px; height: 25px;
+}
+input[type=submit] {
+    width: 10em;  height: 4em;
+}
+    </style>
+</head>
+
+<body>
+    <h2><br><br>RESTAURANTS IN MINNEAPOLIS</h2>
+    <form action="index.py" method="get">
+        <p class="search"><input type="text" name="keyword"
+    value="%s">&nbsp;&nbsp;&nbsp;<a href="/queryp.html"><input
+    type="submit" name = "submit" value="Search"></a><br>(Please
+    seperate keywords by "," without white spaces. eg: best,Sushi)</p>
+        <table style="width:550px; margin-left:auto;margin-right:auto">
+        <tr>
+        <td><p class="ex"> Cuisine </p></td>
+        <td><p class="ex"> Price </p></td>
+        <td><p class="ex"> Neighborhood </p></td>
+        <td><p class="ex"> Sort by </p></td>
+        </tr>
+        <tr>
+        <td><p><input type="radio" name="cuisine" value="Cafe">Cafe</p></td>
+        <td><p><input type="radio" name="price" value="1">$</p></td>
+        <td><p><input type="radio" name="neighbourhood"value="Downtown">Downtown</p></td>
+        <td><p><input type="radio" name="sort" value="0">Rating</p></td>
+        </tr>
+        <tr>
+        <td><p><input type="radio" name="cuisine" value="American">American</p></td>
+        <td><p><input type="radio" name="price" value="2">$$</p></td>
+        <td><p><input type="radio" name="neighbourhood" value="NorthLoop">North Loop</p></td>
+        <td><p><input type="radio" name="sort" value="1">Price</p></td>
+        </tr>
+        <tr>
+        <td><p><input type="radio" name="cuisine" value="Asian">Asian</p></td>
+        <td><p><input type="radio" name="price" value="3">$$$</p></td>
+        <td><p><input type="radio" name="neighbourhood" value="South Minneapolis">South Minneapolis</p></td>
+        </tr>
+        <tr>
+        <td><p><input type="radio" name="cuisine" value="Italian">Italian</p></td>
+        <td><p><input type="radio" name="price" value="4">$$$$</p></td>
+        <td><p><input type="radio" name="neighbourhood" value="Columbia">Columbia</p></td>
+        </tr>
+        <tr>
+        <td><p><input type="radio" name="cuisine" value="Fast Food">Fast Food</p></td>
+        </tr>
+      </table>
+      </form>
+      <p class="ex"> %s </p>
+
+</body>
+</html>
+

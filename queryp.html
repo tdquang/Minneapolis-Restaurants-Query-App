@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>Restaurants in Minneapolis</title>
+<style>
+body{
+    background-image:url('coffeecup.JPG');
+    background-repeat:no-repeat;
+    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+div.scroll{
+width: 1500px;
+height: 700px;
+overflow: auto;
+}
+div.col{
+  float:left;
+  width:100px;
+}
+info{
+  color: white
+}
+h2{
+  color:white;
+  text-align:left;
+  font-size: 30pt
+}
+p{
+  text-align:left;
+  color:white;
+}
+p.ex{
+  text-align:left;
+  font-size: 16pt
+  overflow: scroll
+}
+p.search{
+  text-align:left;
+}
+input[type="text"] {
+    width: 400px; height: 25px;
+}
+{
+width:400px;
+padding:10px;
+margin:0px;
+}
+</style>
+</head>
+
+<body>
+    <h2><br>RESTAURANTS IN MINNEAPOLIS</h2>
+          <FORM><INPUT Type="button" VALUE="Go Back To Home Page"onClick="history.go(-1);return true;"></FORM>
+%s
+<p>There are "%s" results</p>
+      <div class="scroll"><p class="ex"> %s</p></div>
+      %s
+</body>
+</html>
+    
